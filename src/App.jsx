@@ -6,6 +6,7 @@ import TodoDetails, {
   loader as todoDetailsLoader,
   action as todoDetailsAction,
 } from "./pages/TodoDetails";
+import Error from "./pages/Error";
 
 function App() {
   const router = createBrowserRouter([
@@ -13,6 +14,7 @@ function App() {
       path: "/",
       element: <Todos />,
       loader: todosLoader,
+      errorElement: <Error />,
       children: [
         {
           path: "new",
