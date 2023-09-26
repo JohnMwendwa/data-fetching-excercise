@@ -50,6 +50,6 @@ export function updateTodo(id, newText) {
 // delete todo from local storage
 export function deleteTodo(id) {
   const todos = getTodosFromStorage();
-  const updatedTodos = todos.find((t) => t.id !== id);
+  const updatedTodos = todos.filter((t) => t.id !== id);
   saveTodosToLocalStorage(updatedTodos);
 }
